@@ -5,7 +5,6 @@
 # Import required libs for your plugin
 import argparse
 import requests
-from requests.auth import HTTPBasicAuth
 
 # Return codes expected by Nagios
 codes = [ 'OK', 'WARNING', 'CRITICAL', 'UNKNOWN' ]
@@ -15,8 +14,6 @@ my_parser = argparse.ArgumentParser(description='Check WLED node availability')
 
 # Add the arguments
 my_parser.add_argument('hostname', metavar='<hostname>', type=str, help='The hostname/ip of the device')
-my_parser.add_argument('-U', "--username", metavar='username', type=str, help='the WLED api username')
-my_parser.add_argument('-P', "--password", metavar='password', type=str, help='the WLED api password')
 
 # Execute the parse_args() method
 args = my_parser.parse_args()
@@ -24,7 +21,7 @@ args = my_parser.parse_args()
 # Check logic starts here
 
 try:
-    response = requests.get('http://' + args.hostname + '/json/info', auth=HTTPBasicAuth(args.username, args.password))
+    response = requests.get('http://' + args.hostname + '/json/info')
     response.raise_for_status()
 except requests.exceptions.RequestException  as e:
     status = 2
