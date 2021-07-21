@@ -27,19 +27,12 @@ python -m pip install requests
 ## Parameters
 
 ```
-usage: check_wled.py [-h] [-U username] [-P password] <hostname>
+usage: check_wled.py [-h] <hostname>
 
 Check WLED node availability
 
 positional arguments:
   <hostname>            The hostname/ip of the device
-
-optional arguments:
-  -h, --help            show this help message and exit
-  -U username, --username username
-                        the wled api username
-  -P password, --password password
-                        the wled api password
 
 ```
 
