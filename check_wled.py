@@ -21,7 +21,7 @@ args = my_parser.parse_args()
 # Check logic starts here
 
 try:
-    response = requests.get('http://' + args.hostname + '/json/info')
+    response = requests.get('http://' + args.hostname + '/json')
     response.raise_for_status()
 except requests.exceptions.RequestException  as e:
     status = 2
@@ -29,7 +29,7 @@ except requests.exceptions.RequestException  as e:
 else:
     data = response.json()
     status = 0
-    message = "name:{} mac_address:{} version:{}".format(data['name'],':'.join(data['mac'][i:i+2] for i in range(0,12,2)),data['ver'])
+    message = "name:{} on:{} mac_address:{} version:{}".format(data['info']['name'],data['state']['on'],':'.join(data['info']['mac'][i:i+2] for i in range(0,12,2)),data['info']['ver'])
 
 # Print the message for nagios
 print("{} - {}".format(codes[status], message))
