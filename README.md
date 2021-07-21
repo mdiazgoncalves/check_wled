@@ -1,7 +1,7 @@
 # check_WLED
 
 
-Nagios plugin to check availability of [WLED](https://github.com/Aircoookie/WLED/wiki) devices. Checks if the WLED device is online
+Nagios plugin to check availability of [WLED](https://kno.wled.ge/) devices. Checks if the WLED device is online
 
 ## Installation
 
