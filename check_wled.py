@@ -10,7 +10,7 @@ import requests
 codes = [ 'OK', 'WARNING', 'CRITICAL', 'UNKNOWN' ]
 
 # Create the parser
-my_parser = argparse.ArgumentParser(description='Check WLED node availability')
+my_parser = argparse.ArgumentParser(description='Check WLED node availability and status')
 
 # Add the arguments
 my_parser.add_argument('hostname', metavar='<hostname>', type=str, help='The hostname/ip of the device')

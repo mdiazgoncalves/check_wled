@@ -1,7 +1,7 @@
 # check_WLED
 
 
-Nagios plugin to check availability of [WLED](https://kno.wled.ge/) devices. Checks if the WLED device is online
+Nagios plugin to check availability and the status of [WLED](https://kno.wled.ge/) devices. Checks if the WLED device is online and if its on or off.
 
 ## Installation
 
@@ -29,7 +29,7 @@ python -m pip install requests
 ```
 usage: check_wled.py [-h] <hostname>
 
-Check WLED node availability
+Check WLED node availability and status
 
 positional arguments:
   <hostname>            The hostname/ip of the device
