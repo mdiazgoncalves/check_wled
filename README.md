@@ -1,3 +1,8 @@
+[![Pylint](https://github.com/mdiazgoncalves/check_wled/actions/workflows/pylint.yml/badge.svg)](https://github.com/mdiazgoncalves/check_wled/actions/workflows/pylint.yml)
+
+[![Remark lint](https://github.com/mdiazgoncalves/check_wled/actions/workflows/remarklint.yml/badge.svg)](https://github.com/mdiazgoncalves/check_wled/actions/workflows/remarklint.yml)
+
+
 # check_WLED
 
 
