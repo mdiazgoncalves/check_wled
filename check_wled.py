@@ -21,6 +21,9 @@ args = my_parser.parse_args()
 
 # Check logic starts here
 def main():
+    """
+    Check availability and status
+    """
 
     try:
         response = requests.get('http://' + args.hostname + '/json')
