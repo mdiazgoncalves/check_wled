@@ -26,7 +26,7 @@ def main():
     """
 
     try:
-        response = requests.get('http://' + args.hostname + '/json', timeout=10)
+        response = requests.get('http://' + args.hostname + '/json', timeout=5)
         response.raise_for_status()
     except requests.exceptions.RequestException as exception:
         status = 2
